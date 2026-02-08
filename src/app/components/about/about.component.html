@@ -1,0 +1,62 @@
+<section id="about" class="about-section">
+    <div class="container">
+        <h2 class="section-title fade-in">{{ currentLang() === 'en' ? 'About Me' : 'À Propos de Moi' }}</h2>
+
+        <div class="about-content">
+            <div class="profile-image fade-in" style="animation-delay: 0.2s">
+                <!-- Placeholder for profile image -->
+                <div class="img-container">
+                    <!-- Replace with actual image path when available, e.g., assets/profile.jpg -->
+                    <img src="assets/profile.jpg" alt="Imad El Mallahi"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <div class="img-placeholder">
+                        <span>IM</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bio fade-in" style="animation-delay: 0.4s">
+                <ng-container *ngIf="currentLang() === 'en'; else frBio">
+                    <p>
+                        I am a Full Stack Software Engineer with a passion for building robust and scalable
+                        applications.
+                        With experience in both frontend and backend technologies, I enjoy solving complex problems
+                        and delivering high-quality solutions.
+                    </p>
+                    <p>
+                        My journey in tech has led me to work with various enterprise clients,
+                        banking sectors, and startups, helping them modernize their stacks and improve operational
+                        efficiency.
+                    </p>
+                </ng-container>
+                <ng-template #frBio>
+                    <p>
+                        Je suis un ingénieur logiciel Full Stack passionné par la création d'applications robustes et
+                        évolutives.
+                        Avec de l'expérience dans les technologies frontend et backend, j'aime résoudre des problèmes
+                        complexes
+                        et fournir des solutions de haute qualité.
+                    </p>
+                    <p>
+                        Mon parcours technologique m'a amené à travailler avec divers clients entreprises,
+                        secteurs bancaires et startups, les aidant à moderniser leurs stacks et à améliorer leur
+                        efficacité opérationnelle.
+                    </p>
+                </ng-template>
+
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="number">5+</span>
+                        <span class="label">{{ currentLang() === 'en' ? 'Years Experience' : 'Années d\'Expérience'
+                            }}</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="number">10+</span>
+                        <span class="label">{{ currentLang() === 'en' ? 'Projects Completed' : 'Projets Réalisés'
+                            }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

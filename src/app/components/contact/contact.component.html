@@ -1,0 +1,29 @@
+<section id="contact" class="contact-section">
+    <div class="container">
+        <h2 class="section-title fade-in">{{ currentLang() === 'en' ? 'Get In Touch' : 'Me Contacter' }}</h2>
+
+        <div class="contact-content fade-in" style="animation-delay: 0.2s">
+            <p class="contact-text">
+                {{ currentLang() === 'en'
+                ? 'I\'m currently open to new opportunities. Whether you have a question or just want to say hi, I\'ll
+                try my best to get back to you!'
+                : 'Je suis actuellement ouvert à de nouvelles opportunités. Que vous ayez une question ou que vous
+                vouliez simplement dire bonjour, je ferai de mon mieux pour vous répondre !'
+                }}
+            </p>
+
+            <a [href]="'mailto:' + contact().email" class="email-btn">
+                {{ currentLang() === 'en' ? 'Say Hello' : 'Dire Bonjour' }}
+            </a>
+
+            <div class="social-links">
+                <a [href]="contact().github" target="_blank" rel="noopener noreferrer" class="social-link">
+                    GitHub
+                </a>
+                <a [href]="contact().linkedin" target="_blank" rel="noopener noreferrer" class="social-link">
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

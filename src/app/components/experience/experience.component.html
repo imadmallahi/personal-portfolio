@@ -1,0 +1,28 @@
+<section id="experience" class="experience-section">
+    <div class="container">
+        <h2 class="section-title fade-in">{{ currentLang() === 'en' ? 'Experience' : 'Expérience' }}</h2>
+
+        <div class="timeline">
+            <div class="timeline-item fade-in" *ngFor="let job of experience(); let i = index"
+                [style.animation-delay.s]="0.2 * i">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="header">
+                        <h3>{{ job.role }}</h3>
+                        <span class="period">{{ job.period }}</span>
+                    </div>
+                    <h4>{{ job.company }} | {{ job.location }}</h4>
+                    <p class="description">{{ job.description }}</p>
+
+                    <ul class="achievements">
+                        <li *ngFor="let achievement of job.achievements">{{ achievement }}</li>
+                    </ul>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag" *ngFor="let tech of job.technologies">{{ tech }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,82 @@
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.edu-card {
+    background-color: var(--bg-secondary);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background-color: var(--accent-primary);
+        transform: scaleY(0);
+        transition: transform 0.3s ease;
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        border-color: rgba(56, 189, 248, 0.1);
+
+        &::before {
+            transform: scaleY(1);
+        }
+
+        .degree {
+            color: var(--accent-primary);
+        }
+    }
+
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .year {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--accent-secondary);
+            background: rgba(129, 140, 248, 0.1);
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+
+        .icon {
+            font-size: 1.5rem;
+            opacity: 0.5;
+        }
+    }
+
+    .degree {
+        font-size: 1.2rem;
+        color: var(--text-primary);
+        margin-bottom: 10px;
+        transition: color 0.3s ease;
+    }
+
+    .institution {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 5px;
+        font-weight: 500;
+    }
+
+    .location {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        opacity: 0.8;
+    }
+}
