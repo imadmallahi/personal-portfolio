@@ -9,19 +9,74 @@
         color: var(--text-secondary);
     }
 
-    .email-btn {
-        display: inline-block;
-        padding: 15px 30px;
-        border: 1px solid var(--accent-primary);
-        color: var(--accent-primary);
-        border-radius: 6px;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        margin-bottom: 50px;
+    .contact-form {
+        max-width: 600px;
+        margin: 0 auto 50px;
+        text-align: left;
 
-        &:hover {
-            background-color: rgba(56, 189, 248, 0.1);
-            transform: translateY(-3px);
+        .form-group {
+            margin-bottom: 25px;
+
+            label {
+                display: block;
+                margin-bottom: 8px;
+                color: var(--text-primary);
+                font-weight: 500;
+                font-size: 0.95rem;
+            }
+
+            input,
+            textarea {
+                width: 100%;
+                padding: 12px 16px;
+                background-color: var(--bg-color);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 6px;
+                color: var(--text-primary);
+                font-size: 1rem;
+                font-family: inherit;
+                transition: all 0.3s ease;
+
+                &:focus {
+                    outline: none;
+                    border-color: var(--accent-primary);
+                    box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+                }
+
+                &::placeholder {
+                    color: var(--text-secondary);
+                    opacity: 0.5;
+                }
+            }
+
+            textarea {
+                resize: vertical;
+                min-height: 120px;
+            }
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px 30px;
+            background-color: var(--accent-primary);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover:not(:disabled) {
+                background-color: var(--accent-secondary);
+                transform: translateY(-2px);
+                box-shadow: 0 10px 20px rgba(236, 72, 153, 0.3);
+            }
+
+            &:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+            }
         }
     }
 

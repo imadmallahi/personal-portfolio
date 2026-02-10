@@ -27,7 +27,7 @@ export const PROFILE_DATA: MultiLangProfile = {
                     'Rédaction de tests unitaires (JUnit 5)',
                     'Optimisation des performances via la décomposition en modules chargés de manière différée'
                 ],
-                technologies: ['Java 11', 'Spring Boot 3.X', 'Angular 16', 'Jenkins', 'GitLab', 'JFROG', 'Oracle Database', 'SonarQube']
+                technologies: ['Java 17', 'Spring Boot 3.X', 'Angular 16', 'Jenkins', 'GitLab', 'JFROG', 'Oracle Database', 'SonarQube']
             },
             {
                 role: 'Ingénieur Fullstack Confirmé',
@@ -197,7 +197,7 @@ export const PROFILE_DATA: MultiLangProfile = {
                     'Write unit tests (JUnit 5)',
                     'Optimize performance via lazy loaded modules'
                 ],
-                technologies: ['Java 11', 'Spring Boot 3.X', 'Angular 16', 'Jenkins', 'GitLab', 'JFROG', 'Oracle Database', 'SonarQube']
+                technologies: ['Java 17', 'Spring Boot 3.X', 'Angular 16', 'Jenkins', 'GitLab', 'JFROG', 'Oracle Database', 'SonarQube']
             },
             {
                 role: 'Confirmed Fullstack Engineer',
